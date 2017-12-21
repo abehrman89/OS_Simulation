@@ -292,8 +292,6 @@ public class simulation {
 		double clock = 0.0;
 		double lastComplete;
 		double cpu_use = 0.0;
-	
-		//BEGIN COMMENT BLOCK HERE TO SEE ROUND ROBIN EXPERIMENTS
 		
 		Random rand = new Random();
 		int burst = 30;
@@ -305,38 +303,6 @@ public class simulation {
 			processes.add(new Process("P" + i, 0.0, ex, burst));
 			burst += 5;
 		}
-		
-		//END COMMENT BLOCK HERE TO SEE ROUND ROBIN EXPERIMENTS
-		
-		
-		//BEGIN COMMENT BLOCK HERE TO SEE ROUND ROBIN WITHOUT EXPERIMENTS
-		/*
-		Process P1 = new Process ("P1", 0.0, 500.0, 30);
-		processes.add(P1);
-		Process P2 = new Process ("P2", 0.0, 500.0, 35);
-		processes.add(P2);
-		Process P3 = new Process ("P3", 0.0, 500.0, 40);
-		processes.add(P3);
-		Process P4 = new Process ("P4", 0.0, 500.0, 45);
-		processes.add(P4);
-		Process P5 = new Process ("P5", 0.0, 500.0, 50);
-		processes.add(P5);
-		Process P6 = new Process ("P6", 0.0, 500.0, 55);
-		processes.add(P6);
-		Process P7 = new Process ("P7", 0.0, 500.0, 60);
-		processes.add(P7);
-		Process P8 = new Process ("P8", 0.0, 500.0, 65);
-		processes.add(P8);
-		Process P9 = new Process ("P9", 0.0, 500.0, 70);
-		processes.add(P9);
-		Process P10 = new Process ("P10", 0.0, 500.0, 75);
-		processes.add(P10);
-		
-		for (Process p: processes) {
-			p.setQuantum(49);	//adjust quantum as needed
-		}
-		*/
-		//END COMMENT BLOCK HERE TO SEE ROUND ROBIN WITHOUT EXPERIMENTS
 		
 		//tracking queue used to determine when simulation should end
 		//processes will be removed from queue as they complete
